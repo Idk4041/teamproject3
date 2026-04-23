@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  color: #ffffff;
+  font-family: sans-serif;
+  background-color: #f6f7e3;
+}
+
+/*Logo bar*/
+
+#divLogo {
+  background-color: #3f593c;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#imgLogo {
+  width: 70px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/*Navbar*/
+
+#divNavigatie {
+  background-color: #283f25;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#divNavigatie a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/*Homepage*/
+
+#imgFlowers {
+  width: 100%;
+  height: 200px;
+  display: block;
+  margin: 0;
+}
+
+#pImgFlowers {
+  background-image: url("images/pexels-jmark-250716.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  width: 100%;
+  height: 375px;
+}
+
+#pImgFlowers {
+  text-align: center;
+  line-height: 300px;
+  font-size: 24px;
+}
+
+#zonnetje {
+  background-color: #3f593c;
+  text-align: center;
+  margin: 0;
+  padding: 15px;
+  font-size: 24px;
+}
+
+/*Aanbiedingen*/
+
+#aanbiedingen-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 40px;
+  margin: 40px 120px 40px;
+}
+
+.aanbiedingen {
+  background: #d9edb5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+  text-align: center;
+  color: #000000;
+}
+
+.aanbiedingen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 155px;
+}
+
+/*Introductie*/
+
+#introductionContainer {
+  background-color: #3f593c;
+  display: flex;
+  justify-content: center;
+}
+
+#introductionContainer h1 {
+  font-size: 38px;
+  margin-left: 200px;
+  font-weight: normal;
+  text-align: center;
+}
+
+#introductionContainer p {
+  text-align: center;
+  margin: 30px 0 0 150px;
+}
+
+#introductionImg {
+  max-height: 380px;
+  border-radius: 12px;
+  margin: 50px 140px 50px 100px;
+}
+
+/*Assortiment*/
+
+#assortimentContainer {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+#producten {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+#planten-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.plant-card {
+  background-color: #d9edb5;
+  border-radius: 8px;
+  text-align: center;
+  color: #000000;
+  width: 100%;
+}
+
+.plant-card img {
+  width: 100%;
+  height: 187px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.plant-card p {
+  font-size: 16px;
+}
+
+.plant-card-large {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.plant-card-large img {
+  height: 420px;
+}
+
+/*Contact*/
+
+#contact {
+  background-color: #d9edb5;
+  padding: 30px 0px;
+}
+
+#contact p {
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  max-width: 400px;
+  font-size: 16px;
+}
+
+.contactBox {
+  background-color: #3f593c;
+  margin: 0px;
+  padding: 5px;
+}
+
+#contactFormulier {
+  display: flex;
+  background-color: #3f593c;
+  margin-left: 10px;
+  padding: 0 100px;
+  gap: 100px;
+  font-size: 14px;
+}
+
+#contactOpnemen {
+  text-align: center;
+  font-size: 28px;
+}
+
+#vragenEnOpmerkingen {
+  resize: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f7feea;
+  margin-left: 440px;
+  width: 315px;
+}
+
+#contactInformatie {
+  display: flex;
+  gap: 280px;
+  margin-top: 12px;
+}
+
+#contactGegevens {
+  display: flex;
+  gap: 10px;
+  margin-left: 120px;
+}
+
+#email {
+  background-color: #f7feea;
+  border-radius: 8px;
+  display: flex;
+  padding: 7px;
+  width: 322px;
+  margin-left: 1050px;
+}
+
+#contactButton {
+  background-color: #d9edb5;
+  border-radius: 15px;
+  justify-self: center;
+  margin: 10px 0 0 1075px;
+  padding: 7px;
+  width: 280px;
+}
+
+/*Footer*/
+
+#footerContainer {
+  background-color: #283f25;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+#footerLinks {
+  padding-right: 10%;
+  padding-top: 30px;
+}
+
+#footerLinks p,
+#footerRechts p {
+  margin: 4px;
+  font-weight: normal;
+}
+
+#footerRechts h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+/* Shopping Cart */
+#winkelwagen {
+  position: absolute;
+  background-color: #3f593c;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+#wagen-icoon {
+  cursor: pointer;
+  position: relative;
+}
+
+.winkelbutton {
+  background-color: #69ab4b;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* 
+FFFFFF
+3F593C
+283F25
+D9EDB5
+F6F8E7 
+*/
+@media (max-width: 768px) {
+
+  /* navbar and logo */
+  #divLogo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #divNavigatie {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* background img */
+  #pImgFlowers {
+    height: 200px;
+    line-height: 200px;
+  }
+
+  /* introduction */
+
+  #introductionContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #introductionContainer h1,
+  #introductionContainer p {
+    margin-left: 0;
+  }
+
+  #introductionImg {
+    margin: 20px auto;
+    width: 50%;
+    height: auto;
+  }
+
+  /* homepage assortiment */
+  #aanbiedingen-container {
+    margin: 20px;
+  }
+
+  /* contact */
+  #contactFormulier {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  #vragenEnOpmerkingen {
+    margin-left: 0;
+    width: 90%;
+  }
+
+  #email {
+
+    margin-left: 30px;
+    width: 83%;
+  }
+
+  #contactButton {
+    margin-left: 30px;
+    width: 86%;
+  }
+
+  #contactGegevens {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 10PX;
+  }
+
+  /* winkelwagen */
+  #winkelwagen {
+    position: relative;
+    background-color: #3f593c;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+  }
+
+  #wagen-icoon {
+    cursor: pointer;
+    position: relative;
+    max-width: 80px;
+    margin-left: 240px;
+  }
+
+  /* assortiment */
+  #producten {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
