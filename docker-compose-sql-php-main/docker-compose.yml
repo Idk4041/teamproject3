@@ -16,7 +16,7 @@ services:
       MYSQL_USER: "student"
       MYSQL_PASSWORD: "veiligwachtwoord"
     volumes:
-      #- mysqldata:/var/lib/mysql
+      - mysqldata:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - certs:/ssl
       - mysqlconf:/etc/mysql/conf.d/
