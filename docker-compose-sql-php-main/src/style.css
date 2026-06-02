@@ -1,0 +1,257 @@
+/* ── Kleuren: #fff #3f593c #283f25 #d9edb5 #f6f7e3 ── */
+
+body {
+  margin: 0;
+  color: #fff;
+  font-family: sans-serif;
+  background-color: #f6f7e3;
+}
+
+/* Header */
+#divLogo {
+  background-color: #3f593c;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+#imgLogo { width: 70px; }
+
+#divNavigatie {
+  background-color: #283f25;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#divNavigatie a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Homepage hero */
+#pImgFlowers {
+  background-image: url("images/pexels-jmark-250716.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 375px;
+  margin: 0;
+  text-align: center;
+  line-height: 375px;
+  font-size: 24px;
+}
+
+#zonnetje {
+  background-color: #3f593c;
+  text-align: center;
+  margin: 0;
+  padding: 15px;
+  font-size: 24px;
+}
+
+/* Aanbiedingen */
+#aanbiedingen-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 40px;
+  margin: 40px 120px;
+}
+
+.aanbiedingen {
+  background: #d9edb5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.28);
+  text-align: center;
+  color: #000;
+}
+
+.aanbiedingen img { width: 100%; max-height: 155px; object-fit: cover; }
+
+/* Introductie */
+#introductionContainer {
+  background-color: #3f593c;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  gap: 60px;
+}
+
+#introductionContainer h1 { font-size: 38px; font-weight: normal; }
+#introductionContainer p  { text-align: center; }
+#introductionImg { max-height: 380px; border-radius: 12px; }
+
+/* Assortiment grid */
+#assortimentContainer {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+#producten {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.plant-card {
+  background-color: #d9edb5;
+  border-radius: 8px;
+  text-align: center;
+  color: #000;
+}
+
+.plant-card img {
+  width: 100%;
+  height: 187px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  display: block;
+}
+
+.plant-card h3, .plant-card p { margin: 6px 0; font-size: 14px; }
+
+/* Filter bar */
+#filterBar {
+  background-color: #3f593c;
+  padding: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#filterBar input, #filterBar select {
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #f7feea;
+  font-size: 14px;
+}
+
+#filterBar button, #filterBar a {
+  padding: 7px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #d9edb5;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Resultaat teller */
+#resultaatTeller {
+  text-align: center;
+  color: #3f593c;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* Paginering */
+#paginering {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+#paginering a, #paginering span {
+  padding: 7px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #d9edb5;
+  color: #000;
+  font-size: 14px;
+}
+
+#paginering span.actief { background-color: #3f593c; color: #fff; font-weight: bold; }
+
+/* Contact */
+.contactBox { background-color: #3f593c; padding: 20px; }
+#contactOpnemen { text-align: center; }
+
+#contactFormulier {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+#vragenEnOpmerkingen {
+  resize: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f7feea;
+}
+
+#email {
+  background-color: #f7feea;
+  border-radius: 8px;
+  padding: 7px;
+  width: 300px;
+  border: none;
+  display: block;
+  margin: 10px auto;
+}
+
+#contactButton {
+  background-color: #d9edb5;
+  border-radius: 15px;
+  padding: 7px 20px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+}
+
+#contactGegevens { display: flex; gap: 10px; justify-content: center; padding: 10px; }
+
+/* Winkelwagen */
+#winkelwagen {
+  position: absolute;
+  background-color: #3f593c;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  max-width: 300px;
+}
+
+#wagen-icoon { cursor: pointer; }
+
+.winkelbutton {
+  background-color: #69ab4b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer */
+#footerContainer {
+  background-color: #283f25;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 40px;
+}
+
+#footerLinks p, #footerRechts p { margin: 4px; font-weight: normal; }
+#footerRechts h2 { margin-bottom: 10px; font-weight: normal; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  #divLogo { flex-direction: column; }
+  #divNavigatie { display: flex; flex-direction: column; gap: 10px; }
+  #pImgFlowers { height: 200px; line-height: 200px; }
+  #introductionContainer { flex-direction: column; align-items: center; }
+  #introductionImg { width: 80%; }
+  #aanbiedingen-container { margin: 20px; }
+  #producten { grid-template-columns: repeat(2, 1fr); }
+  #winkelwagen { position: relative; max-width: 100%; }
+  #footerContainer { flex-direction: column; gap: 20px; align-items: center; }
+}
