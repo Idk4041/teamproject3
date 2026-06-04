@@ -70,7 +70,7 @@ $kleuren = $conn->query("SELECT DISTINCT kleur FROM planten_met_afbeeldingen ORD
       <div id="producten">
         <?php foreach ($planten as $p): ?>
           <div class="plant-card">
-            <img loading="lazy" src="planten-images/<?= $p['overview_image'] ?>" alt="<?= $p['naam'] ?>" onerror="this.style.display='none'">
+            <img loading="lazy" src="plant_images/<?= $p['overview_image'] ?>" alt="<?= $p['naam'] ?>" onerror="this.style.display='none'">
             <h3><?= $p['naam'] ?></h3>
             <p><?= $p['kleur'] ?></p>
             <p><strong>€<?= number_format($p['verkoopprijs_eur'], 2, ',', '.') ?></strong></p>
