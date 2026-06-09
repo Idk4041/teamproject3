@@ -12,11 +12,11 @@ $offset = ($pagina - 1) * $perPagina;
 $sql = "SELECT naam, verkoopprijs_eur, kleur, overview_image, standplaats_id FROM planten_met_afbeeldingen WHERE voorraad > 0";
 
 if ($naam != '' && $kleur != '') {
-    $sql .= " WHERE naam LIKE '%" . $conn->real_escape_string($naam) . "%' AND kleur = '" . $conn->real_escape_string($kleur) . "'";
+    $sql .= " AND naam LIKE '%" . $conn->real_escape_string($naam) . "%' AND kleur = '" . $conn->real_escape_string($kleur) . "'";
 } elseif ($naam != '') {
-    $sql .= " WHERE naam LIKE '%" . $conn->real_escape_string($naam) . "%'";
+    $sql .= " AND naam LIKE '%" . $conn->real_escape_string($naam) . "%'";
 } elseif ($kleur != '') {
-    $sql .= " WHERE kleur = '" . $conn->real_escape_string($kleur) . "'";
+    $sql .= " AND kleur = '" . $conn->real_escape_string($kleur) . "'";
 }
 
 $sql .= " ORDER BY naam LIMIT $perPagina OFFSET $offset";
