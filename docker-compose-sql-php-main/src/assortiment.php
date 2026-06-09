@@ -5,10 +5,11 @@ $conn = require_once __DIR__ . '/partials/dbconnection.php';
 $naam  = $_GET['naam']   ?? '';
 $kleur = $_GET['kleur']  ?? '';
 $pagina = $_GET['pagina'] ?? 1;
+
 $perPagina = 24;
 $offset = ($pagina - 1) * $perPagina;
 
-$sql = "SELECT naam, verkoopprijs_eur, kleur, overview_image FROM planten_met_afbeeldingen";
+$sql = "SELECT naam, verkoopprijs_eur, kleur, overview_image, standplaats_id FROM planten_met_afbeeldingen";
 
 if ($naam != '' && $kleur != '') {
     $sql .= " WHERE naam LIKE '%" . $conn->real_escape_string($naam) . "%' AND kleur = '" . $conn->real_escape_string($kleur) . "'";
@@ -23,7 +24,7 @@ $sql .= " ORDER BY naam LIMIT $perPagina OFFSET $offset";
 $result  = $conn->query($sql);
 $planten = $result->fetch_all(MYSQLI_ASSOC);
 
-$totaalResult = $conn->query("SELECT COUNT(*) FROM planten_met_afbeeldingen");
+$totaalResult = $conn->query("SELECT COUNT(*) FROM planten_met_afbeeldingen WHERE voorraad > 0");
 $totaal = $totaalResult->fetch_row()[0];
 $totaalPaginas = ceil($totaal / $perPagina);
 
@@ -73,6 +74,7 @@ $kleuren = $conn->query("SELECT DISTINCT kleur FROM planten_met_afbeeldingen ORD
             <img loading="lazy" src="plant_images/<?= $p['overview_image'] ?>" alt="<?= $p['naam'] ?>" onerror="this.style.display='none'">
             <h3><?= $p['naam'] ?></h3>
             <p><?= $p['kleur'] ?></p>
+            <p><?= $p['standplaats_id'] ?></p>
             <p><strong>€<?= number_format($p['verkoopprijs_eur'], 2, ',', '.') ?></strong></p>
           </div>
         <?php endforeach; ?>
