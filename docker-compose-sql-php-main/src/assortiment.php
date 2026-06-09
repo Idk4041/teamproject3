@@ -9,7 +9,7 @@ $pagina = $_GET['pagina'] ?? 1;
 $perPagina = 24;
 $offset = ($pagina - 1) * $perPagina;
 
-$sql = "SELECT naam, verkoopprijs_eur, kleur, overview_image, standplaats_id FROM planten_met_afbeeldingen";
+$sql = "SELECT naam, verkoopprijs_eur, kleur, overview_image, standplaats_id FROM planten_met_afbeeldingen WHERE voorraad > 0";
 
 if ($naam != '' && $kleur != '') {
     $sql .= " WHERE naam LIKE '%" . $conn->real_escape_string($naam) . "%' AND kleur = '" . $conn->real_escape_string($kleur) . "'";
